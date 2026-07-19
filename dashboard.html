@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Gallery — Manish Singh</title>
+  <meta name="description" content="A showcase of Excel dashboard visuals and MIS report designs by Manish Singh.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html#top" class="logo">MS</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span></button>
+  </nav>
+</header>
+
+<main class="page-shell">
+  <section class="wrap page-hero reveal">
+    <div class="eyebrow">Dashboard Gallery</div>
+    <h1>Excel dashboards<br><span>built to tell the story.</span></h1>
+    <p class="lead">These visuals reflect my approach to reporting: clear structure, business-focused metrics, and dashboards that help teams act faster with confidence.</p>
+    <div class="hero-cta">
+      <a href="index.html#projects" class="btn btn-solid">Back to Portfolio</a>
+      <a href="#gallery" class="btn btn-outline">View Screenshots</a>
+    </div>
+  </section>
+
+  <section class="wrap insight-grid reveal">
+    <div class="insight-card">
+      <div class="eyebrow">What this shows</div>
+      <h3>Business-ready reporting</h3>
+      <p>I focus on turning raw numbers into dashboards that are easy to read, useful for decision-making, and strong enough for both team updates and leadership review.</p>
+      <ul class="feature-list">
+        <li>Executive-friendly summaries</li>
+        <li>Clear KPI tracking and trend visibility</li>
+        <li>Practical MIS-style reporting views</li>
+      </ul>
+    </div>
+
+    <div class="insight-card highlight-card">
+      <div class="eyebrow">Interview-ready summary</div>
+      <h3>Data + business thinking</h3>
+      <p>I combine Excel, reporting logic, dashboard design, and a business mindset to create outputs that are both visual and actionable.</p>
+      <div class="pill-row">
+        <span>Excel</span>
+        <span>Pivot Tables</span>
+        <span>MIS</span>
+        <span>Dashboard Design</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="wrap gallery-section reveal">
+    <div class="section-head">
+      <div class="eyebrow">Featured Work</div>
+      <h2>Dashboard snapshots</h2>
+    </div>
+    <div class="gallery-grid">
+      <article class="gallery-card">
+        <img src="assets/Database.png" alt="Excel dashboard showing database overview with KPIs and performance layout">
+        <div class="gallery-meta">
+          <h3>Database Overview</h3>
+          <p>Structured reporting layout for monitoring key metrics, performance trends, and quick decision support.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <img src="assets/Pivotdata.png" alt="Excel dashboard built around pivot data and analytical charts">
+        <div class="gallery-meta">
+          <h3>Pivot &amp; Insights</h3>
+          <p>Analytical views that highlight patterns, segment performance, and reporting summaries in a simple format.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <img src="assets/Red MIS.png" alt="MIS dashboard screenshot with summary metrics and reporting view">
+        <div class="gallery-meta">
+          <h3>Red MIS Report</h3>
+          <p>High-impact reporting format designed for daily tracking, updates, and fast executive review.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Manish Singh</span>
+  <span>Data · Marketing · Frontend · SQL</span>
+</footer>
+
+<script>
+  // mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+
+  // scroll reveal animation
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.15});
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
