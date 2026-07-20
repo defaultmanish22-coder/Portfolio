@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire Manish Singh</title>
+  <meta name="description" content="Book a freelance project, hire for work, or buy a service from Manish Singh.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">MS</a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hire-page">
+    <section class="wrap hire-card">
+      <div class="eyebrow">Booking</div>
+      <h1>Let’s discuss your next project</h1>
+      <p class="lead">Choose the service that fits your goal. For work inquiries, I can also start a WhatsApp chat directly.</p>
+
+      <div class="hire-options">
+        <a href="https://wa.me/919004547746?text=Hello%20Manish%2C%20I%20would%20like%20to%20discuss%20a%20freelance%20project." class="hire-option">
+          <h3>Freelance Project</h3>
+          <p>Website builds, dashboards, SEO, analytics support, and custom solutions.</p>
+        </a>
+        <a href="https://wa.me/919004547746?text=Hello%20Manish%2C%20I%20would%20like%20to%20hire%20you%20for%20work." class="hire-option">
+          <h3>Hire for Work</h3>
+          <p>Longer-term collaboration, campaign support, data reporting, or ongoing execution.</p>
+        </a>
+        <a href="https://wa.me/919004547746?text=Hello%20Manish%2C%20I%20would%20like%20to%20buy%20a%20service." class="hire-option">
+          <h3>Buy a Service</h3>
+          <p>Single-service requests such as a dashboard, ad setup, or website support.</p>
+        </a>
+      </div>
+
+      <form class="contact-form" action="https://formsubmit.co/defaultmanish22@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New enquiry from portfolio website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="service" id="serviceType" placeholder="Service Type" required>
+        <textarea name="message" rows="5" placeholder="Tell me about your project or requirement" required></textarea>
+        <button type="submit" class="btn btn-solid">Send Enquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Manish Singh</span>
+    <span>Data · Marketing · Frontend · SQL</span>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get('type');
+    const serviceInput = document.getElementById('serviceType');
+    if (serviceInput) {
+      if (type === 'freelance') serviceInput.value = 'Freelance Project';
+      else if (type === 'service') serviceInput.value = 'Buy a Service';
+      else serviceInput.value = 'Hire for Work';
+    }
+  </script>
+</body>
+</html>
