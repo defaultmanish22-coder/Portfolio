@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketing Experience — Manish Singh</title>
+  <meta name="description" content="Digital marketing experience covering Meta Ads, SEO for education brands, social media planning, live events, and Canva content creation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html#top" class="logo">MS</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="digital-marketing.html">Digital Marketing</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span></button>
+  </nav>
+</header>
+
+<main class="page-shell">
+  <section class="wrap page-hero reveal">
+    <div class="eyebrow">Digital Marketing</div>
+    <h1>Growth-focused marketing<br><span>from paid ads to SEO and content.</span></h1>
+    <p class="lead">I’ve worked across performance marketing, SEO, social media execution, live event coordination, and content creation — helping brands grow their visibility and engagement with a practical, results-driven approach.</p>
+    <div class="hero-cta">
+      <a href="index.html#projects" class="btn btn-solid">Back to Portfolio</a>
+      <a href="https://wa.me/919004547746?text=Hello%20Manish%2C%20I%20would%20like%20to%20discuss%20digital%20marketing%20work." class="btn btn-outline">Discuss a Project</a>
+    </div>
+  </section>
+
+  <section class="wrap insight-grid reveal">
+    <div class="insight-card">
+      <div class="eyebrow">Core experience</div>
+      <h3>Marketing work that spans campaigns, content, and growth</h3>
+      <p>I’ve supported multiple real estate companies with push marketing on Meta ads, handled SEO for education-focused brands, and managed social media planning and execution for ongoing digital presence.</p>
+      <ul class="feature-list">
+        <li>Meta ads for real estate lead generation and brand visibility</li>
+        <li>SEO strategy and website optimization for education companies</li>
+        <li>Social media post planning, scheduling, and content coordination</li>
+      </ul>
+    </div>
+
+    <div class="insight-card highlight-card">
+      <div class="eyebrow">Highlights</div>
+      <h3>Hands-on experience with online campaigns and large-scale digital events</h3>
+      <p>My workflow blends strategy, creativity, and coordination — from building campaign messaging to running live online events and producing content that resonates.</p>
+      <div class="metric-row">
+        <span class="metric-pill">Multiple Real Estate Brands</span>
+        <span class="metric-pill">SEO for Education Companies</span>
+        <span class="metric-pill">5K+ Active Streamers</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap gallery-section reveal">
+    <div class="section-head">
+      <div class="eyebrow">What I’ve done</div>
+      <h2>Marketing capabilities</h2>
+    </div>
+
+    <div class="service-grid">
+      <article class="insight-card">
+        <h3>Paid marketing on Meta Ads</h3>
+        <p>Worked with multiple real estate companies to run push marketing campaigns on Meta Ads, helping increase reach, engagement, and lead potential through structured promotion.</p>
+      </article>
+
+      <article class="insight-card">
+        <h3>SEO for education brands</h3>
+        <p>Delivered SEO support for several education-related companies, including website SEO, content alignment, and ongoing optimization for better online visibility.</p>
+      </article>
+
+      <article class="insight-card">
+        <h3>Social media planning and scheduling</h3>
+        <p>Handled social media post planning, content calendars, and scheduling to keep brands active and consistent across digital platforms.</p>
+      </article>
+
+      <article class="insight-card">
+        <h3>Content creation and live events</h3>
+        <p>Created engaging content such as videos and Canva posts, while also coordinating online live events with more than 5,000 active streamers.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap spotlight-section reveal">
+    <div class="insight-card highlight-card">
+      <div class="eyebrow">Professional approach</div>
+      <h3>Strategy, execution, and creative support in one place</h3>
+      <p>I enjoy turning ideas into campaigns that are organized, measurable, and visually strong. Whether it is paid marketing, SEO, social media operations, or content production, I focus on helping brands stay visible and relevant.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Manish Singh</span>
+  <span>Digital Marketing · SEO · Content · Social Media</span>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
