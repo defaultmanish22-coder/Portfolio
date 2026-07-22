@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend & SQL — Manish Singh</title>
+  <meta name="description" content="Frontend development and SQL backend work: sites, small web tools, and database design to power dashboards and apps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html#top" class="logo">MS</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="digital-marketing.html">Digital Marketing</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span></button>
+  </nav>
+</header>
+
+<main class="page-shell">
+  <section class="wrap page-hero reveal">
+    <div class="eyebrow">Frontend & SQL</div>
+    <h1>Clean frontends<br><span>and reliable SQL backends.</span></h1>
+    <p class="lead">I build lightweight frontends and design SQL databases that power dashboards, websites and reporting tools — bridging design, UX and data.</p>
+    <div class="hero-cta">
+      <a href="index.html#projects" class="btn btn-solid">Back to Portfolio</a>
+      <a href="https://wa.me/919004547746?text=Hello%20Manish%2C%20I%20want%20to%20discuss%20a%20frontend%20or%20SQL%20project." class="btn btn-outline">Discuss a Project</a>
+    </div>
+  </section>
+
+  <section class="wrap insight-grid reveal">
+    <div class="insight-card">
+      <div class="eyebrow">Frontend</div>
+      <h3>Responsive websites & small web tools</h3>
+      <p>I create simple, accessible frontends using HTML, CSS and JavaScript. I also build small interactive tools and prototypes that integrate with reporting and campaign UX flows.</p>
+      <div class="pill-row">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Responsive Design</span>
+      </div>
+    </div>
+
+    <div class="insight-card highlight-card">
+      <div class="eyebrow">SQL & Backend</div>
+      <h3>Database design and data pipelines</h3>
+      <p>I design SQL schemas, build simple ETL flows and connect databases to dashboards so teams can rely on clean, queryable data for reporting and decision-making.</p>
+      <div class="pill-row">
+        <span>SQL</span>
+        <span>Database Design</span>
+        <span>ETL</span>
+        <span>Dashboard Integration</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap gallery-section reveal">
+    <div class="section-head">
+      <div class="eyebrow">Selected work</div>
+      <h2>Frontend + SQL Projects</h2>
+    </div>
+    <div class="gallery-grid">
+      <article class="gallery-card">
+        <img src="assets/phpmyadmin.png" alt="Database project screenshot">
+        <div class="gallery-meta">
+          <h3>SQL Backend</h3>
+          <p>Designed a SQL backend to power a data-driven website and dashboards.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <img src="assets/SYV.png" alt="Website project screenshot">
+        <div class="gallery-meta">
+          <h3>Frontend Development</h3>
+          <p>Created responsive websites and small web tools using modern frontend technologies.</p>
+        </div>
+      </article>
+
+      <article class="gallery-card">
+        <img src="assets/admin.png" alt="Dashboard screenshot">
+        <div class="gallery-meta">
+          <h3>Dashboards Representation</h3>
+          <p>Data Representation & clean datasets for reporting.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Manish Singh</span>
+  <span>Frontend · SQL · Data</span>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
